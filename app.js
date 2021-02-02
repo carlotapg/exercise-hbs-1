@@ -46,13 +46,15 @@ app.get("/example", (req, res, next) => {
 // EXERCISE !
 app.get('/user', (req, res, next) => {
   const data = {
-    firstName: 'YOUR NAME',
-    lastName: 'YOUR LAST NAME',
-    image: "https://i.imgur.com/X7nm0R5.png",
+    firstName: 'Carlota ',
+    lastName: 'Piñol',
+    image: "/css/gig.jpg",
     techStack: ['html', 'css', 'js', 'node', 'express']
   }
 
-
+    // reads views/index.hbs and creates HTML page out of it and then sends it to the client
+    res.render("user", data);
+ 
   // Your Code here... 
   // Render the user view and inject the data from above object 
   // and display it in the page
